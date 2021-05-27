@@ -2,8 +2,10 @@
 
 select 
 	name, 
+    set_code,
 	set_name, 
 	set_type,
+    collector_number,
 	to_timestamp(date*86400)::date as price_date, 
 	(to_date(date_released, 'YYYY-MM-DD')+INTERVAL '60 days')::date as rel_60, 
 	date_released::date,
